@@ -24,6 +24,7 @@ Gender and Age Detection in Customer Analysis
     <td>22520646</td>
   </tr>
 </table>
+
 ## Introduction
 This project aims to determine the gender and age of customers using facial recognition to improve marketing strategies at Go! Dĩ An supermarket. By automating the collection of this data, we can help marketing departments tailor their campaigns more effectively, saving time and resources.
 
@@ -78,71 +79,12 @@ We implemented and compared several machine learning algorithms:
 SVM proved to be the most effective model for predicting both age and gender. Future work could involve enhancing data preprocessing, expanding the dataset, and optimizing model parameters to improve accuracy.
 
 ## Additional Information from Notebook
+- Data Loading and Exploration
+- Data Preprocessing
+- Model Building and Training
+- Evaluation Metrics
 
-### Data Loading and Exploration
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Load the dataset
-data_path = 'path_to_dataset.csv'
-data = pd.read_csv(data_path)
-
-# Display the first few rows of the dataset
-print(data.head())
-
-# Visualize the age distribution
-plt.hist(data['age'], bins=20)
-plt.title('Age Distribution')
-plt.xlabel('Age')
-plt.ylabel('Frequency')
-plt.show()
-
-## Data Preprocessing
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-
-# Assuming 'features' contains the image data and 'labels' contains the target variables
-features = data.drop(columns=['age', 'gender'])
-labels = data[['age', 'gender']]
-
-# Scaling the features
-scaler = StandardScaler()
-scaled_features = scaler.fit_transform(features)
-
-# Applying PCA
-pca = PCA(n_components=50)  # Adjust n_components as needed
-pca_features = pca.fit_transform(scaled_features)
-
-# Split data into training and testing sets
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(pca_features, labels, test_size=0.2, random_state=42)
-
-
-## Model Building and Training
-from sklearn.svm import SVC
-
-# Initialize the SVM model
-svm_model = SVC(kernel='linear')
-
-# Train the model
-svm_model.fit(X_train, y_train['gender'])
-
-# Predict using the trained model
-gender_predictions = svm_model.predict(X_test)
-
-## Evaluation Metrics
-from sklearn.metrics import accuracy_score, classification_report
-
-# Evaluate the model
-accuracy = accuracy_score(y_test['gender'], gender_predictions)
-print(f'Gender Prediction Accuracy: {accuracy}')
-
-# Detailed classification report
-print(classification_report(y_test['gender'], gender_predictions))
-
-### References
+## References
 - Course slides and materials
 - [OpenCV Canny Edge Detection](https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html)
 - [DataCamp K-Nearest Neighbor Classification](https://www.datacamp.com/tutorial/k-nearest-neighbor-classification-scikit-learn)
