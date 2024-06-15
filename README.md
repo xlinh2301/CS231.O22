@@ -1,9 +1,6 @@
 <h1 align="center">
 Gender and Age Detection in Customer Analysis
 </h1>
-<p align="center">
-MongoDB, Expressjs, React, Nodejs
-</p>
 
 <table align="center">
   <tr>
