@@ -141,7 +141,8 @@ print(f'Gender Prediction Accuracy: {accuracy}')
 
 # Detailed classification report
 print(classification_report(y_test['gender'], gender_predictions))
-## References
+
+### References
 - Course slides and materials
 - [OpenCV Canny Edge Detection](https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html)
 - [DataCamp K-Nearest Neighbor Classification](https://www.datacamp.com/tutorial/k-nearest-neighbor-classification-scikit-learn)
