@@ -1,5 +1,32 @@
-# Gender and Age Detection in Customer Analysis
+<h1 align="center">
+Gender and Age Detection in Customer Analysis
+</h1>
+<p align="center">
+MongoDB, Expressjs, React, Nodejs
+</p>
 
+<table align="center">
+  <tr>
+    <th>Tên</th>
+    <th>MSSV</th>
+  </tr>
+  <tr>
+    <td>Nguyễn Xuân Linh</td>
+    <td>22520775</td>
+  </tr>
+  <tr>
+    <td>Lưu Khánh Vinh</td>
+    <td>22521671</td>
+  </tr>
+  <tr>
+    <td>Nguyễn Hữu Đức</td>
+    <td>22520270</td>
+  </tr>
+  <tr>
+    <td>Nguyễn Quốc Khánh</td>
+    <td>22520646</td>
+  </tr>
+</table>
 ## Introduction
 This project aims to determine the gender and age of customers using facial recognition to improve marketing strategies at Go! Dĩ An supermarket. By automating the collection of this data, we can help marketing departments tailor their campaigns more effectively, saving time and resources.
 
